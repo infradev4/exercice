@@ -10,13 +10,24 @@ namespace Exercice_1._7
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Tri de nombres");
-            int[] valeurs = new int[] {1,2,3};
-            
-            
-            Console.WriteLine();
-            Console.ReadLine();
+            string valeurs;
 
+            Console.WriteLine("Tri de nombres");
+            Console.WriteLine("Entrer des chiffres :");
+
+            valeurs = Console.ReadLine();
+
+            //Console.WriteLine(valeurs.Length);
+
+            if (valeurs.Length < 2)
+            {
+                Console.WriteLine(valeurs);
+            }
+            else 
+            {
+                Console.WriteLine("Probleme");
+            }
+            Console.ReadLine();
         }
     }
 }
