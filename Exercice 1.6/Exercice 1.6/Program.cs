@@ -13,6 +13,7 @@ namespace Exercice_1._6
             String nombre;
             double nombreConvertie;
             bool nombreTest;
+            //test
             
             double Index;
 
