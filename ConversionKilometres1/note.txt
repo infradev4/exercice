@@ -1,0 +1,32 @@
+using System;
+
+namespace Galere
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Programme de conversion Kilomètres <-> Miles");
+            Console.WriteLine("Saisir une valeur et son unité de mesure (séparés par un espace) :");
+            
+            float valeur_saisie;
+            string unite;
+            float valeur_unite_kms = 1.60F;
+            float resultat_conversion;
+            
+            Console.WriteLine(valeur_unite_kms); 
+            Console.WriteLine(" texte " + valeur_unite_kms); 
+
+
+            if(valeur_unite_kms > 2)
+            {
+                Console.WriteLine("++"); 
+            }
+            else 
+            {
+                Console.WriteLine("--"); 
+            }
+            Console.ReadLine();
+        }   
+    }
+}
