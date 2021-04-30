@@ -10,9 +10,10 @@ namespace Exercice_1._10
             int nombreConverti;
             bool nombreTeste;
             int index;
-            int totalPremier;
+            int TotalA;
+            int totalParfait;
 
-            Console.WriteLine("Programme de calcul des Nombres premiers parfaits");
+            Console.WriteLine("Programme de calcul des Nombres parfaits");
             Console.WriteLine("Entrer un nombre entier :");
             nombreEntrer = Console.ReadLine();
 
@@ -20,10 +21,10 @@ namespace Exercice_1._10
 
             if(nombreTeste)
             {
-                for (index = 2; nombreConverti => index; index++)
+                for (index = 1; nombreConverti => index; index++)
                 {
-                    totalPremier = (nombreConverti % index);
-                    if (totalPremier == 0)
+                    totalParfait = (nombreConverti / index);
+                    if (totalParfait == 0)
                     { }
                 }
             }
