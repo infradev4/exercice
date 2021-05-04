@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;//pour utiliser les listes
+
 
 namespace Exercice_1._10
 {
@@ -12,6 +14,19 @@ namespace Exercice_1._10
             int index;
             //int TotalA;
             int totalParfait;
+
+            //System.Collections.Generic = utiliser pour les utiliser les listes
+            List<string> liste = new List<string>() {"a",b};
+
+            ou
+
+            List.Add("aaa");
+            List.Add("bbb");
+            liste[1] = "ccc"
+
+            Console.WriteLine(liste.Count);
+
+
 
             Console.WriteLine("Programme de calcul des Nombres parfaits");
             Console.WriteLine("Entrer un nombre entier :");
@@ -31,6 +46,9 @@ namespace Exercice_1._10
                 }
             }
         Console.ReadLine();
+
+            List<int> liste = new List<int>() {"a",b};
+
         }
     }
 }

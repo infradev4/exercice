@@ -7,7 +7,7 @@ namespace Exercice_1._9
         static void Main(string[] args)
         {
             int diviseur = 2;
-            int total;
+            int reste;
             int entrerConvertie;
 
             Console.WriteLine("Recherche des diviseurs d’un nombre");
@@ -21,11 +21,10 @@ namespace Exercice_1._9
             {
                 for (diviseur = 2; diviseur < entrerConvertie; diviseur++)
                 {
-                    total = (entrerConvertie % diviseur);
-                    Console.WriteLine("diviseur " + diviseur + " " + "total " + total);
-                    //Console.WriteLine(total);
-
-                if (total == 0)
+                    reste = (entrerConvertie % diviseur);
+                    Console.WriteLine("diviseur " + diviseur + " " + "reste " + reste);
+                    
+                    if (diviseur == entrerConvertie & diviseur == 1 & reste == 1)
                     {
                         break;
                     }
