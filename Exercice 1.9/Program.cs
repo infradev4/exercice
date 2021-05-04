@@ -9,28 +9,33 @@ namespace Exercice_1._9
             int diviseur = 2;
             int reste;
             int entrerConvertie;
+            bool entrerTester;
+            string entrer;
 
             Console.WriteLine("Recherche des diviseurs d’un nombre");
             Console.WriteLine("Entrer un nombre entier :");
 
-            string entrer=Console.ReadLine();
+            entrer = Console.ReadLine();
 
-            bool entrerTester=int.TryParse(entrer,out entrerConvertie);
+            entrerTester = int.TryParse(entrer,out entrerConvertie);
 
-            if (entrerTester)
+            if (entrerTester == false)
             {
-                for (diviseur = 2; diviseur < entrerConvertie; diviseur++)
-                {
-                    reste = (entrerConvertie % diviseur);
-                    Console.WriteLine("diviseur " + diviseur + " " + "reste " + reste);
-                    
-                    if (diviseur == entrerConvertie & diviseur == 1 & reste == 1)
-                    {
-                        break;
-                    }
-                }
+                Console.WriteLine("Entrer un nombre entier s'il vous");
             }
-            Console.ReadLine();
+
+            for (diviseur = 2; diviseur < entrerConvertie; diviseur++)
+            {
+                reste = (entrerConvertie % diviseur);
+                Console.WriteLine("diviseur " + diviseur + " " + "reste " + reste);
+                /*
+                if (diviseur == entrerConvertie & reste == 0)
+                {
+                    break;
+                }
+                */
+            }
+                    Console.ReadLine();
         }
     }
 }
