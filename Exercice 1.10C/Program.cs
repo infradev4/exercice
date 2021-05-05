@@ -6,29 +6,38 @@ namespace Exercice_1._10C
     {
         static void Main(string[] args)
         {
+            string a;
             int compt = 0; 
-            int n; 
-            int k; 
-            int somdiv; 
+            int saisie;
+            int k;
+            int somdiv;
             int nbr;
-            
+
             Console.WriteLine("Programme de recherche des nombres parfaits");
             Console.WriteLine("Combien de nombre parfaits souhaitez-vous afficher ? :");
-            
-            n = Int32.Parse(Console.ReadLine());
-            nbr = 2;
 
-            while (compt != n)
-            { 
+            a = Console.ReadLine();
+            saisie = int.Parse(a);
+            nbr = 2;
+            
+            while (compt != saisie)
+            {
                 somdiv = 1;
                 k = 2;
                 
-                while(k <= nbr/2 )
-                {
-                    if (nbr % k == 0) 
-                    somdiv += k ;
-                    k++;
-                } 
+                    while(k <= nbr/2 )
+                    {
+                        if (nbr % k == 0) 
+                        somdiv += k;
+                        k++;
+                    }
+                    
+                    if (somdiv == nbr)
+                    {
+                        Console.WriteLine(nbr+" est un nombre parfait");
+                        compt++;
+                    }
+                    nbr++;
             }
         }
     }

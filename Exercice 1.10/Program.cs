@@ -13,7 +13,7 @@ namespace Exercice_1._10
             Si il est défini N nombre parfait à afficher
                 Alors je commence les calculs pour rechercher les nombres parfaits
                 je détermine les nombres parfaits et j'affiche les diviseurs
-
+                
             Fin si 
                 la liste des nombres parfaits est atteint  
             */
