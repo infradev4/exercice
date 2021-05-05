@@ -1,5 +1,5 @@
 ﻿using System;
-//using System.Collections.Generic;//pour utiliser les listes
+using System.Collections.Generic;//pour utiliser les listes
 
 
 namespace Exercice_1._10
@@ -8,47 +8,60 @@ namespace Exercice_1._10
     {
         static void Main(string[] args)
         {
-            string nombreEntrer;
-            int nombreConverti;
-            bool nombreTeste;
-            int index;
-            //int TotalA;
-            int totalParfait;
+            /*
+            pseudo code:
+            Si il est défini N nombre parfait à afficher
+                Alors je commence les calculs pour rechercher les nombres parfaits
+                je détermine les nombres parfaits et j'affichie les diviseurs 
+            Fin si 
+                la liste des nombres parfaits est atteint  
+            */
 
-/*
-            System.Collections.Generic = utiliser pour les utiliser les listes
-            List<string> liste = new List<string>() {"a",b};
+            int diviseur = 2;
+            int reste;
+            int entrerConvertie;
+            bool entrerTester;
+            string entrer;
 
-            ou
-
-            List.Add("aaa");
-            List.Add("bbb");
-            liste[1] = "ccc"
-
-            Console.WriteLine(liste.Count);
-            List<int> liste = new List<int>() {"a",b};
-
-*/
-
-
-            Console.WriteLine("Programme de calcul des Nombres parfaits");
+            Console.WriteLine("Programme de recherche des nombres parfaits");
             Console.WriteLine("Entrer un nombre entier :");
-            nombreEntrer = Console.ReadLine();
+            Console.WriteLine("Combien de nombre parfaits souhaitez-vous afficher ?c :");
 
-            nombreTeste = int.TryParse(nombreEntrer,out nombreConverti);
+            entrer = Console.ReadLine();
 
-            if (nombreTeste)
+            entrerTester = int.TryParse(entrer,out entrerConvertie);
+
+            if (entrerTester == false)
             {
-                for (index = 1; nombreConverti >= index; index++)
-                {
-                    totalParfait = (nombreConverti / index);
-                    Console.WriteLine("nombreConverti: " + nombreConverti + " index: " + index);
-                    Console.WriteLine("totalParfait " + totalParfait);
-                    if (totalParfait == 0)
-                    { }
-                }
+                Console.WriteLine("Entrer un nombre entier s'il vous");
             }
-        Console.ReadLine();
+
+            for (diviseur = 2; diviseur < entrerConvertie; diviseur++)
+            {
+                reste = (entrerConvertie % diviseur);
+                Console.WriteLine("diviseur " + diviseur + " " + "reste " + reste);
+                Console.WriteLine(reste);
+
+                // Créer une liste 
+                List<int> lesDiviseurs = new List<int> ();
+
+                //Ajoute des éléments.
+                //lesDiviseurs.Add(reste);
+
+                // Affiche la capacité (taille de la liste)
+                //Console.WriteLine(lesDiviseurs.Capacity);
+
+                // Affiche le nombre d'éléments
+                //Console.WriteLine(lesDiviseurs.Count);   
+            }
+            
+            /*
+            //Parcourir la liste avec la boucle for-each:
+            foreach(string item in langage) {
+            Console.WriteLine(item);
+            */
+            
+            Console.ReadLine();
         }
     }
 }

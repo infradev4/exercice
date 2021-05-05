@@ -15,7 +15,7 @@ namespace Exercice_1._6
             bool nombreTest;
             //test
             
-            double Index;
+            double diviseur;
 
             //double valeurRacine;
             //int valeurRacineEntier;
@@ -27,9 +27,9 @@ namespace Exercice_1._6
 
             nombreTest = double.TryParse(nombre, out nombreConvertie);//9
 
-            for (Index = 2; Index < nombreConvertie ; Index++)
+            for (diviseur = 2; diviseur < nombreConvertie ; diviseur++)
             {
-                testA = (nombreConvertie % Index);
+                testA = (nombreConvertie % diviseur);
                 Console.WriteLine(testA);
                 if (testA == 0)
                 {
@@ -47,7 +47,7 @@ namespace Exercice_1._6
                 valeurRacine = Math.Sqrt(nombreConvertie);//3
                 valeurRacineEntier = Convert.ToInt32(valeurRacine);//3
                 
-                for (Index = 2; Index < valeurRacineEntier; Index++)
+                for (diviseur = 2; diviseur < valeurRacineEntier; diviseur++)
                 {
                     testA = (nombreConvertie / valeurRacineEntier);
                     Console.WriteLine(testA);
