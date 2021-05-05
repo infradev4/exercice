@@ -12,7 +12,8 @@ namespace Exercice_1._10
             pseudo code:
             Si il est défini N nombre parfait à afficher
                 Alors je commence les calculs pour rechercher les nombres parfaits
-                je détermine les nombres parfaits et j'affichie les diviseurs 
+                je détermine les nombres parfaits et j'affiche les diviseurs
+
             Fin si 
                 la liste des nombres parfaits est atteint  
             */
@@ -25,7 +26,7 @@ namespace Exercice_1._10
 
             Console.WriteLine("Programme de recherche des nombres parfaits");
             Console.WriteLine("Entrer un nombre entier :");
-            Console.WriteLine("Combien de nombre parfaits souhaitez-vous afficher ?c :");
+            //Console.WriteLine("Combien de nombre parfaits souhaitez-vous afficher ? :");
 
             entrer = Console.ReadLine();
 
