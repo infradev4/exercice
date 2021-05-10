@@ -7,48 +7,50 @@ namespace Exercice_2._3
         static void Main(string[] args)
         {   
             string a;
+            string continuer;
             int saissie;
             int aleatoire;
-            int index;
 
-            Console.WriteLine("Jeu de la fourchette \nL'ordinateur « choisit » un nombre entier compris entre 0 et 100");
-            Console.WriteLine("Essayez de le deviner");
-
-            a = Console.ReadLine();
-
-            int.TryParse(a, out saissie);
-            
-            Random generationAleatoire = new Random();
-            aleatoire = generationAleatoire.Next(0,2);
-            Console.WriteLine(aleatoire);
-
-            if(aleatoire == saissie)
-            {                    
-                Console.WriteLine(generationAleatoire);
-                Console.WriteLine("Vous avez trouver le chiffre");
-            }
-            else
-            {
-                for(index = 0;index !=aleatoire ;index++)
-                {
-                    Console.WriteLine(generationAleatoire.Next(aleatoire,2));
-                }
-            }
-
-            
+            //L'aafichage peut se faire sur une ligne ou 3
+            Console.WriteLine("Jeu de la fourchette \nL'ordinateur « choisit » un nombre entier compris entre 0 et 100 \nEssayez de le deviner");
             /*
-            Random generationAleatoire = new Random();
-            for (index = 1; index <= 5; index++)
-            Console.WriteLine(generationAleatoire.Next(0,2));
+            Console.WriteLine("Jeu de la fourchette");
+            Console.WriteLine("L'ordinateur « choisit » un nombre entier compris entre 0 et 100");
+            Console.WriteLine("Essayez de le deviner");
             */
 
+            a = Console.ReadLine();
+            int.TryParse(a, out saissie);
             
+            //Random est utilisé pour obtenir un nombre entier aléatoire.
+            Random generationAleatoire = new Random();
+            //Le nombre entier aléatoire est affecté à la variable "generationAleatoire"
+            //Next(0,2) // (de X, a X) rang des chiffres généré
+            aleatoire = generationAleatoire.Next(0,5);
+            //Console.WriteLine(aleatoire);
+            do
+            {
+                //Si le nombre généré est == au chiffre saissie
+                if(aleatoire == saissie)
+                {                    
+                    //alors afficher "Vous avez trouver le chiffre"
+                    //il y a deux façon d'écrire:
+                    Console.WriteLine($"Vous avez trouver le chiffre : {aleatoire}");
+                    //Console.Write("Vous avez trouver le chiffre : {0}",aleatoire);
+                }
+                
+                    int fourchetteA = (aleatoire + 1);
+                    int fourchetteB = (fourchetteA - 2);
+                    Console.WriteLine($"La fourchette du chiffre à trouver se trouve entre : {fourchetteB} et {fourchetteA}");
+                    Console.WriteLine("Souhaitez-vous faire un autre essai ? (O/N)");
+                    
+                    continuer = Console.ReadLine();
+            }
 
+            while(continuer.ToLower() == "o" );
 
-
-
-
-
-        }
+            Console.WriteLine("Appuyez sur une touche pour quitter");
+            Console.ReadLine();
+        }  
     }
 }
