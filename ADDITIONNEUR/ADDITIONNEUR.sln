@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADDITIONNEUR", "ADDITIONNEUR\ADDITIONNEUR.csproj", "{97BB8844-7057-4741-AE22-80AE03E72038}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97BB8844-7057-4741-AE22-80AE03E72038}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97BB8844-7057-4741-AE22-80AE03E72038}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97BB8844-7057-4741-AE22-80AE03E72038}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97BB8844-7057-4741-AE22-80AE03E72038}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A1C59D4-F74C-4F4C-8369-9B143388FB2A}
+	EndGlobalSection
+EndGlobal
