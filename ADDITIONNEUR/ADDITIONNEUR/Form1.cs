@@ -20,8 +20,6 @@ namespace ADDITIONNEUR
 
         private void btnCalculer_Click(object sender, EventArgs e)
         {
-            //txbEcran.Text = txbEcran.Text + ((Button)sender).Text + "+";
-            txbEcran.Text = txbEcran.Text;
             txbEcran.Text += " = " + total + "+";
         }
 
@@ -92,20 +90,7 @@ namespace ADDITIONNEUR
 
         private void txbEcran_TextChanged(object sender, EventArgs e)
         {
-            //total += Convert.ToInt32(((Button)sender).Text);
-
-            /*
-            this.btxChiffreZero.Click += new System.EventHandler(this.btnCalculer_Click);
-            this.btxChiffreUn.Click += new System.EventHandler(this.btnCalculer_Click);
-            this.btxChiffreDeux.Click += new System.EventHandler(this.btnCalculer_Click);
-            this.btxChiffreTrois.Click += new System.EventHandler(this.btnCalculer_Click);
-            this.btxChiffreQuattre.Click += new System.EventHandler(this.btnCalculer_Click);
-            this.btxChiffreCinq.Click += new System.EventHandler(this.btnCalculer_Click);
-            this.btxChiffreSix.Click += new System.EventHandler(this.btnCalculer_Click);
-            this.btxChiffreSept.Click += new System.EventHandler(this.btnCalculer_Click);
-            this.btxChiffreHuit.Click += new System.EventHandler(this.btnCalculer_Click);
-            this.btxChiffreNeuf.Click += new System.EventHandler(this.btnCalculer_Click);
-            */
+          
         }
     }
 }
