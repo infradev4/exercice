@@ -12,7 +12,7 @@ namespace ADDITIONNEUR
 {
     public partial class Additionneur : Form
     {
-        int total;
+        int total = 0;
         public Additionneur()
         {
             InitializeComponent();
@@ -22,6 +22,8 @@ namespace ADDITIONNEUR
         {
             txbEcran.Text = txbEcran.Text + ((Button)sender).Text + "+";
             total += Convert.ToInt32(((Button)sender).Text);
+            txbEcran.Text += " = " + total + "+";
+
         }
 
         private void btnVider_Click(object sender, EventArgs e)
@@ -90,7 +92,18 @@ namespace ADDITIONNEUR
 
         private void txbEcran_TextChanged(object sender, EventArgs e)
         {
-
+            /*
+            this.btxChiffreZero.Click += new System.EventHandler(this.btnCalculer_Click);
+            this.btxChiffreUn.Click += new System.EventHandler(this.btnCalculer_Click);
+            this.btxChiffreDeux.Click += new System.EventHandler(this.btnCalculer_Click);
+            this.btxChiffreTrois.Click += new System.EventHandler(this.btnCalculer_Click);
+            this.btxChiffreQuattre.Click += new System.EventHandler(this.btnCalculer_Click);
+            this.btxChiffreCinq.Click += new System.EventHandler(this.btnCalculer_Click);
+            this.btxChiffreSix.Click += new System.EventHandler(this.btnCalculer_Click);
+            this.btxChiffreSept.Click += new System.EventHandler(this.btnCalculer_Click);
+            this.btxChiffreHuit.Click += new System.EventHandler(this.btnCalculer_Click);
+            this.btxChiffreNeuf.Click += new System.EventHandler(this.btnCalculer_Click);
+            */
         }
     }
 }

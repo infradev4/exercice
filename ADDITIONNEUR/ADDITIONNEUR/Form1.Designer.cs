@@ -47,7 +47,7 @@ namespace ADDITIONNEUR
             // 
             // btnVider
             // 
-            this.btnVider.Location = new System.Drawing.Point(12, 332);
+            this.btnVider.Location = new System.Drawing.Point(12, 235);
             this.btnVider.Name = "btnVider";
             this.btnVider.Size = new System.Drawing.Size(94, 29);
             this.btnVider.TabIndex = 0;
@@ -57,7 +57,7 @@ namespace ADDITIONNEUR
             // 
             // btnCalculer
             // 
-            this.btnCalculer.Location = new System.Drawing.Point(202, 332);
+            this.btnCalculer.Location = new System.Drawing.Point(202, 235);
             this.btnCalculer.Name = "btnCalculer";
             this.btnCalculer.Size = new System.Drawing.Size(94, 29);
             this.btnCalculer.TabIndex = 1;
@@ -189,7 +189,7 @@ namespace ADDITIONNEUR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(319, 380);
+            this.ClientSize = new System.Drawing.Size(319, 288);
             this.Controls.Add(this.btxChiffreNeuf);
             this.Controls.Add(this.btxChiffreCinq);
             this.Controls.Add(this.btxChiffreHuit);
