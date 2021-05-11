@@ -7,8 +7,10 @@ namespace Exercice_2._3
         static void Main(string[] args)
         {   
             string a;
+            string b;
             string continuer;
             int saissie;
+            int saissieB;
             int aleatoire;
 
             //L'aafichage peut se faire sur une ligne ou 3
@@ -28,8 +30,7 @@ namespace Exercice_2._3
             //Next(0,2) // (de X, a X) rang des chiffres généré
             aleatoire = generationAleatoire.Next(0,5);
             //Console.WriteLine(aleatoire);
-            do
-            {
+            
                 //Si le nombre généré est == au chiffre saissie
                 if(aleatoire == saissie)
                 {                    
@@ -38,18 +39,24 @@ namespace Exercice_2._3
                     Console.WriteLine($"Vous avez trouver le chiffre : {aleatoire}");
                     //Console.Write("Vous avez trouver le chiffre : {0}",aleatoire);
                 }
-                
-                    int fourchetteA = (aleatoire + 1);
-                    int fourchetteB = (fourchetteA - 2);
+                else
+                {
+                    int fourchetteA = (aleatoire + 2);
+                    int fourchetteB = (fourchetteA - 3);
                     Console.WriteLine($"La fourchette du chiffre à trouver se trouve entre : {fourchetteB} et {fourchetteA}");
                     Console.WriteLine("Souhaitez-vous faire un autre essai ? (O/N)");
-                    
                     continuer = Console.ReadLine();
+                }
+
+            do
+            {
+                b = Console.ReadLine();
+                int.TryParse(b, out saissieB);
             }
 
             while(continuer.ToLower() == "o" );
 
-            Console.WriteLine("Appuyez sur une touche pour quitter");
+            Console.WriteLine("Appuyez sur une touche  pour quitter");
             Console.ReadLine();
         }  
     }
