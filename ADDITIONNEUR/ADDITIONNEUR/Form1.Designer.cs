@@ -74,6 +74,7 @@ namespace ADDITIONNEUR
             this.txbEcran.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txbEcran.Size = new System.Drawing.Size(284, 115);
             this.txbEcran.TabIndex = 2;
+            this.txbEcran.TextChanged += new System.EventHandler(this.txbEcran_TextChanged);
             // 
             // btxChiffreZero
             // 
