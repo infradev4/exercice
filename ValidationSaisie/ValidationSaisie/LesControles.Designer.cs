@@ -35,6 +35,7 @@ namespace ValidationSaisie
             this.LblFormat = new System.Windows.Forms.Label();
             this.LblCodePostal = new System.Windows.Forms.Label();
             this.TxbNom = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // LblNom
@@ -90,11 +91,19 @@ namespace ValidationSaisie
             this.TxbNom.Size = new System.Drawing.Size(125, 27);
             this.TxbNom.TabIndex = 5;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(137, 94);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(125, 27);
+            this.textBox1.TabIndex = 6;
+            // 
             // LesControles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.TxbNom);
             this.Controls.Add(this.LblCodePostal);
             this.Controls.Add(this.LblFormat);
@@ -116,6 +125,7 @@ namespace ValidationSaisie
         private System.Windows.Forms.Label LblFormat;
         private System.Windows.Forms.Label LblCodePostal;
         private System.Windows.Forms.TextBox TxbNom;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
