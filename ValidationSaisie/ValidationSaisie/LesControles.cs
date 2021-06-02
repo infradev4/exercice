@@ -8,6 +8,9 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
+
+
 
 namespace ValidationSaisie
 {
@@ -21,28 +24,54 @@ namespace ValidationSaisie
         private void btnValider_Click(object sender, EventArgs e)
         {
             Regex regex = new Regex("^[AZa-z]{1,30}$");
-            Regex regexB = new Regex("^[0-9][0-9]+/[0-9][0-9]+/[0-9][0-9][0-9][0-9]+$");
+            Regex regexC = new Regex("^[0-9].?[0-9]?$");
+            Regex regexD = new Regex("^[0-9]{5}$"); 
 
-            if (txbNom.Text == "" & txbDate.Text == "" & txbMontant.Text == "" & txbCodepostal.Text == "")
+
+            if (txbNom.Text == "")
             {
                 errorProvider1.SetError(txbNom, "veuillez remplir tous les champs");
-                errorProvider2.SetError(txbDate, "veuillez remplir tous les champs");
-                errorProvider3.SetError(txbMontant, "veuillez remplir tous les champs");
-                errorProvider4.SetError(txbCodepostal, "veuillez remplir tous les champs");
             }
-            else if ((!regex.Match(txbNom.Text).Success) & (!regexB.Match(txbDate.Text).Success))
+            else if (!regex.Match(txbNom.Text).Success) 
             {
                 errorProvider1.SetError(txbNom, "veuillez utiliser des caractères alphabétiques (max 30)");
+            }
+
+            if (txbDate.Text == "")
+            {
+                errorProvider2.SetError(txbDate, "veuillez remplir tous les champs");
+            }
+            else if (!DateTime.TryParseExact(txbDate.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime date))
+            {
                 errorProvider2.SetError(txbDate, "veuillez utiliser une date valide");
             }
+
+            if (txbMontant.Text == "")
+            {
+                errorProvider3.SetError(txbMontant, "veuillez remplir tous les champs");
+            }
+            else if (!regexC.Match(txbMontant.Text).Success)
+            {
+                errorProvider3.SetError(txbMontant, "veuillez utiliser une Montant valide");
+            }
+
+            if (txbCodepostal.Text == "")
+            {
+                errorProvider4.SetError(txbCodepostal, "veuillez remplir tous les champs");
+            }
+            else if (!regexD.Match(txbCodepostal.Text).Success)
+            {
+                errorProvider4.SetError(txbCodepostal, "veuillez utiliser 5 caractères numériques");
+            }
+
             else
             {
                 MessageBox.Show
                     (
-                    "Nom : " + txbNom.Text + Environment.NewLine + 
-                    "Date : " + txbDate.Text + Environment.NewLine + 
-                    "Montant : " + txbMontant.Text + Environment.NewLine + 
-                    "Code Postal : " + txbCodepostal.Text, 
+                    "Nom : " + txbNom.Text + Environment.NewLine +
+                    "Date : " + txbDate.Text + Environment.NewLine +
+                    "Montant : " + txbMontant.Text + Environment.NewLine +
+                    "Code Postal : " + txbCodepostal.Text,
                     "Validation Effectuée", MessageBoxButtons.OK
                     );
 
@@ -53,9 +82,9 @@ namespace ValidationSaisie
                     MessageBoxIcon.Question,
                     MessageBoxDefaultButton.Button1
                     );
-                
+
                 if (dialogresult == DialogResult.Yes)
-                Application.Exit();
+                    Application.Exit();
             }
         }
 

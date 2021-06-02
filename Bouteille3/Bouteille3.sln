@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bouteille3", "Bouteille3\Bouteille3.csproj", "{7EE20E9E-37E7-43DB-970D-D2E9A85300DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7EE20E9E-37E7-43DB-970D-D2E9A85300DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EE20E9E-37E7-43DB-970D-D2E9A85300DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EE20E9E-37E7-43DB-970D-D2E9A85300DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EE20E9E-37E7-43DB-970D-D2E9A85300DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
