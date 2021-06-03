@@ -21,6 +21,13 @@ namespace CompteBancaire
         {
             solde = solde - montant;
         }
+        //description d'un compte bancaire dans la class afin de ne pas avoir à le faire pour chaque objet
+
+        // Renvoie la description d'un compte
+        public void Decrire ()
+        {
+            string description = "Le solde du compte de " + titulaire + " est de " + solde + " + devise";
+        }
     }
     
     /*
@@ -32,6 +39,12 @@ namespace CompteBancaire
     {
         static void Main(string[] args)
         {
+
+        /*
+        Déclaration et instanciation d'un nouvel objet sur une meme ligne
+        CompteBancaire compteOussama = new CompteBancaire();
+        */
+
         //déclaration d'un nouvel objet Oussama
         CompteBancaire compteOussama;
         // instanciation de l'objet Oussama
