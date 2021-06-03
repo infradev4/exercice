@@ -28,32 +28,27 @@ namespace CompteBancaire
     deux opérations.
     */
 
-    static void Main(string[] args)
-    {
-        //déclaration d'un nouvel objet Oussama
-        CompteBancaire CompteOussama;
-        // instanciation de l'objet Oussama
-        CompteOussama = new CompteBancaire();
-        // affectations de valeurs aux attributs de la class CompteBancaire
-        CompteOussama.titulaire = "Oussama";
-        CompteOussama.solde = 0;
-        CompteOussama.devise = "euro";
-        
-        // appels des méthodes de la class dans notre objet
-        CompteOussama.Crediter(850);
-
-
-    }
-
-
-    /*
-    
-    class Program
+     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+        //déclaration d'un nouvel objet Oussama
+        CompteBancaire compteOussama;
+        // instanciation de l'objet Oussama
+        compteOussama = new CompteBancaire();
+        // affectations de valeurs aux attributs de la class CompteBancaire
+        compteOussama.titulaire = "Oussama";
+        compteOussama.solde = 0;
+        compteOussama.devise = "euro";
+        // appels des méthodes de la class dans notre objet
+        compteOussama.Crediter(850);
+        compteOussama.Debiter(100);
+
+        string description = "Le solde du compte de " + compteOussama.titulaire + 
+                            " est de " + compteOussama.solde + 
+                            " " + compteOussama.devise;
+        
+        Console.WriteLine(description);
         }
     }
-    */
 }
