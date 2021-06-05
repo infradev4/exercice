@@ -16,23 +16,23 @@ namespace CompteBancaire
         private string devise;
 
         //Les accesseurs est une méthode permetent de modifier les attributs privés
-
         public string Titulaire
         {
             get {return titulaire;}
-            set {titulaire = value;}
+        //string titulaireCompte = compteChat.Titulaire;    // en lecture (getter)
+        //Ici, j'affiche la valeur de "titulaire" avec "titulaireCompte"
+            set {titulaire = value;}    
         }
-
+        
         public double Solde
         {
             get {return solde;}
-            set {solde = value;}
+           private set {solde = value;}
         }
-
         public string Devise
         {
             get {return devise;}
-            set {devise = value;}
+           private set {devise = value;}
         }
 
         //la définition des méthodes de la classe
@@ -121,13 +121,15 @@ namespace CompteBancaire
         CompteBancaire compteChat = new CompteBancaire(0,"Chat","euro");
 
         // appels de méthodes avec le constructeur
+
+        //string titulaireCompte = compteChat.Titulaire;    // en lecture (getter)
+        compteChat.Titulaire = "Galere";    // en écriture (setter)
+        //compteChat.Solde = 9;               // en écriture (setter)
+        //compteChat.Devise = "MAD";          // en écriture (setter)
+
         compteChat.Crediter(150);
         compteChat.Debiter(25);
         Console.WriteLine(compteChat.Decrire());
-
-        CompteBancaire compteTest = new CompteBancaire;
-
-        compteTest.
         }
     }
 }
