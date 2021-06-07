@@ -6,9 +6,15 @@ namespace BouteilleCOrrection
     {
         //attributs: données représentent l'état de l'objet
         private string name; 
-        public bool etatbouchon;
-        public float conteneurEnPourcentage; 
-        public float contenanceEnLittre;
+        
+        //public bool etatbouchon;
+        private bool etatbouchon;
+
+        //public float conteneurEnPourcentage;
+        private float conteneurEnPourcentage; 
+
+        //public float contenanceEnLittre;
+        private float contenanceEnLittre;
 
         //propriété (lecture, écriture ou le calcul de la valeur des champs privé)
         public void SetName(string _newname)
@@ -146,7 +152,6 @@ namespace BouteilleCOrrection
         {
             return "Je suis une bouteille d'" + this.name + " en etat " + this.etatbouchon + " avec un conteneur de " + this.contenanceEnLittre + "L et un contenant en pourcentage de " + this.conteneurEnPourcentage + " % ";
         }
-
     }
     
     class Program
@@ -154,7 +159,6 @@ namespace BouteilleCOrrection
         static void Main(string[] args)
         {
             Bouteille mabouteilleA;
-
             mabouteilleA = new Bouteille("eau", 1);
             mabouteilleA.SetEtatOuvert();
             
@@ -164,10 +168,8 @@ namespace BouteilleCOrrection
             mabouteilleA.ViderTelPourcentage();
             Console.WriteLine(mabouteilleA.ToString());
             Console.ReadLine();
-
             
             Bouteille mabouteilleB;
-
             mabouteilleB = new Bouteille("sprite", 2);
             mabouteilleB.ViderTout();
             mabouteilleB.SetEtatFermer(true);
