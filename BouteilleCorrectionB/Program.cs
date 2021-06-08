@@ -30,6 +30,25 @@ namespace BouteilleCorrectionB
 
         //la définition des méthodes de la classe
         //les méthodes utilisent (et modifient) les valeurs des attributs
+        public void Remplir(double quantite)
+        {
+            contenanceEnL = contenanceEnL + quantite;
+        }
+
+        public void Vider(double quantite)
+        {
+            contenanceEnL = contenanceEnL - quantite;
+        }
+
+        public void RemplirTout(double quantite)
+        {
+            contenanceEnL = contenanceEnL + quantite;
+        }
+
+        public void ViderTout(double quantite)
+        {
+            contenanceEnL = contenanceEnL - quantite;
+        }
 
 
 
