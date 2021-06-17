@@ -13,14 +13,14 @@ namespace ConsoleAppBanque
         {
 
             double tauxInteret = 0.05;  // taux d'intérêt : 5%
-            CompteEpargne comptePaul = new CompteEpargne("paul", 100, "dollars", tauxInteret);
+            CompteEpargne compteOussama = new CompteEpargne("Oussama", 100, "euros", tauxInteret);
 
             // appel des méthodes de CompteBancaire sur le compte épargne
-            comptePaul.Debiter(1000);
-            comptePaul.Crediter(1500);
-            comptePaul.AjouterInterets();
-            Console.WriteLine(comptePaul.Decrire()); // Si j'utilise la methode  => public string decrire()
-            //Console.WriteLine(comptePaul.ToString()); // Si j'utilise la methode  => override string ToString()
+            compteOussama.Debiter(1000);
+            compteOussama.Crediter(1500);
+            compteOussama.AjouterInterets();
+            Console.WriteLine(compteOussama.Decrire()); // Si j'utilise la methode  => public string decrire()
+            //Console.WriteLine(compteOussama.ToString()); // Si j'utilise la methode  => override string ToString()
 
             Console.ReadKey();
 
