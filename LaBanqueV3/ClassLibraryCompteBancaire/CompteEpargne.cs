@@ -12,18 +12,19 @@ namespace ClassLibraryCompteBancaire
     public class CompteEpargne : CompteBancaire //les deux-points spécifient que la classe CompteEpargne hérite de la classe CompteBancaire
     {
         private double tauxInteret;
+        double interets;
         // appel du constructeur de la classe CompteBancaire
         // le mot-clé "base" permet d'accéder à la classe parente
         public CompteEpargne(string leTitulaire, double soldeInitial, string laDevise, double leTauxInteret): base(leTitulaire, soldeInitial, laDevise)
         {
-            tauxInteret = leTauxInteret;
+            this.tauxInteret = leTauxInteret;
         }
 
         // Calcule et ajoute les intérêts au solde du compte
         public void AjouterInterets()
         {
             // calcul des intérêts sur le solde
-            double interets = solde * tauxInteret;
+            interets = solde * tauxInteret;
             // ajout des intérêts au solde
             //Solde += interets;
             solde = solde + interets;
@@ -33,7 +34,7 @@ namespace ClassLibraryCompteBancaire
         {
             // Le montant maximal d'un retrait est la moitié du solde actuel
             if (montant <= Solde / 2)
-                Solde -= montant;
+                Solde = Solde - montant;
         }
 
         // Redéfinition de la méthode Decrire
