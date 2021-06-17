@@ -29,7 +29,7 @@ namespace ClassLibraryCompteBancaire
             //Solde += interets;
             solde = solde + interets;
         }
-        // redéfinition de la méthode Debiter
+        // // Redéfinition de la méthode Debiter de la class CompteBancaire avec le mot-clé override
         public override void Debiter(double montant)
         {
             // Le montant maximal d'un retrait est la moitié du solde actuel
@@ -37,7 +37,7 @@ namespace ClassLibraryCompteBancaire
                 Solde = Solde - montant;
         }
 
-        // Redéfinition de la méthode Decrire
+        //// Redéfinition de la méthode Decrire de la class CompteBancaire avec le mot-clé override
         public override string Decrire()
         {
             return base.Decrire() + ". Son taux d'intérêt est de " + (tauxInteret * 100) + "%.";

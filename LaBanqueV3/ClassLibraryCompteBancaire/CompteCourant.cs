@@ -28,12 +28,12 @@ namespace ClassLibraryCompteBancaire
         //    solde = solde - montant;
         //}
 
-        // Redéfinition de la méthode Debiter
+        // Redéfinition de la méthode Debiter de la class CompteBancaire avec le mot-clé override
         public override void Debiter(double montant)
         {
             // on n'effectue le débit que si le solde final reste supérieur au découvert
             if (Solde - montant >= decouvertMaxi)
-                Solde -= montant;
+                Solde = Solde - montant;
         }
     }
 }
