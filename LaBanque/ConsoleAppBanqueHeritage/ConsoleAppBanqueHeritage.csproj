@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8D9B34CA-FAB8-489C-970A-F04B06F30F94}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>ClassLibraryBanque</RootNamespace>
-    <AssemblyName>ClassLibraryBanque</AssemblyName>
+    <ProjectGuid>{6E47B1FD-7A36-434D-87CD-7F453ADA9668}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ConsoleAppBanqueHeritage</RootNamespace>
+    <AssemblyName>ConsoleAppBanqueHeritage</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,19 +32,28 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
-    <None Include="ClassDiagram2.cd" />
-    <None Include="ClassDiagram3.cd" />
-    <None Include="ClassDiagram4.cd" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Client.cs" />
-    <Compile Include="CompteBancaire.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibraryBanqueHeritage\ClassLibraryBanqueHeritage.csproj">
+      <Project>{af523adb-d954-49fb-8e07-517661322456}</Project>
+      <Name>ClassLibraryBanqueHeritage</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

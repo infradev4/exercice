@@ -29,18 +29,18 @@ namespace ClassLibraryBanque
             get {return titulaire;}
         //string titulaireCompte = compteChat.Titulaire;    // en lecture (getter)
         //Ici, j'affiche la valeur de "titulaire" avec "titulaireCompte"
-            set {titulaire = value;}    
+            //set {titulaire = value;}    
         }
         
         public double Solde
         {
             get {return solde;}
-           private set {solde = value;}
+           //private set {solde = value;}
         }
         public string Devise
         {
             get {return devise;}
-           private set {devise = value;}
+           //private set {devise = value;}
         }
 
         //la définition des méthodes de la classe
@@ -63,11 +63,15 @@ namespace ClassLibraryBanque
         //description d'un compte bancaire avec les information de la class Client en supplement
         public string Decrire()
         {
-            string descriptionTitulaire = titulaire.Prenom + " " + titulaire.Nom + " numero de compte : " + titulaire.Numero;
+            string descriptionTitulaire = titulaire.Prenom + " " + titulaire.Nom + " N° de compte : " + titulaire.Numero; // + " " + titulaire.Comptes;
             string description = "Le solde du compte de " + descriptionTitulaire + " est de " + solde + " " + devise;
             return description;
         }
-
+        //Construteur par defaut 
+        public CompteBancaire() : this(0, new Client(), "euros")
+        {
+        }
+        //Constructeur Classique
         //le constructeur me peremt d'instancier la class CompteBancaire avec des valeurs par defaut 
         //afin de ne pas etre oblige de complete a chaque instanciation des informations repetitives.
         public CompteBancaire(double soldeInitial, Client leTitulaire, string laDevise) //string leTitulaire => Client leTitulaire

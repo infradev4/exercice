@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8D9B34CA-FAB8-489C-970A-F04B06F30F94}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>ClassLibraryBanque</RootNamespace>
-    <AssemblyName>ClassLibraryBanque</AssemblyName>
+    <ProjectGuid>{6509DCEF-CC71-4FFD-9510-3C9A3EB8ECE4}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ConsoleAppBanque</RootNamespace>
+    <AssemblyName>ConsoleAppBanque</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,19 +32,17 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
-    <None Include="ClassDiagram2.cd" />
-    <None Include="ClassDiagram3.cd" />
-    <None Include="ClassDiagram4.cd" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Client.cs" />
-    <Compile Include="CompteBancaire.cs" />
+    <Compile Include="Program.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibraryCompteBancaire\ClassLibraryCompteBancaire.csproj">
+      <Project>{f24c0317-50e5-48db-adba-f4f06c2d4f33}</Project>
+      <Name>ClassLibraryCompteBancaire</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

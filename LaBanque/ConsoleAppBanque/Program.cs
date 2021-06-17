@@ -12,7 +12,6 @@ namespace ConsoleAppBanque
     {
         static void Main(string[] args)
         {
-
             //Déclaration et instanciation d'un nouvel objet sur une meme ligne
             //CompteBancaire compteOussama = new CompteBancaire();
             //    ou
@@ -76,7 +75,11 @@ namespace ConsoleAppBanque
 
             // association entre oussama et compteCourantIng
             CompteBancaire compteCourantIng = new CompteBancaire(500, oussama, "euros");
+            //CompteBancaire compteCourantCreditAgricole = new CompteBancaire(200, oussama, "euros");
+            //CompteBancaire compteCourantLaPoste = new CompteBancaire(800, oussama, "euros");
             oussama.Comptes.Add(compteCourantIng);
+            //oussama.Comptes.Add(compteCourantCreditAgricole);
+            //oussama.Comptes.Add(compteCourantLaPoste);
 
             // association entre amelyne et compteCourantCic
             CompteBancaire compteCourantCic = new CompteBancaire(1000, amelyne, "euros");
@@ -84,10 +87,12 @@ namespace ConsoleAppBanque
 
             //Console.WriteLine("N° du titulaire du compte 1 : " + compte1.Titulaire.Numero);
             //Console.WriteLine("Nom du titulaire du compte 2 : " + compte2.Titulaire.Nom);
+            //Console.WriteLine(compteCourantIng.Decrire() + "\n" + compteCourantCreditAgricole.Decrire() + "\n" + compteCourantLaPoste.Decrire());
             Console.WriteLine(compteCourantIng.Decrire());
             Console.WriteLine(compteCourantCic.Decrire());
 
-            Console.ReadLine();
+
+            Console.ReadKey();
         }
     }
 }
