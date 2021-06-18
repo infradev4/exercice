@@ -49,6 +49,11 @@ namespace ClassLibraryCompteBancaire
         //Ce sera aux classes qui héritent de CompteBancaire de fournir la méthode
         public abstract void Debiter(double montant);
 
+        public void Transferer(double montant, CompteCourant compteCourant)
+        {
+            solde = solde + montant;
+        }
+
         // une méthode virtuelle (virtual) fournit un comportement par défaut dans une classe
         // Une méthode virtuelle définit un comportement
         public virtual string Decrire()
