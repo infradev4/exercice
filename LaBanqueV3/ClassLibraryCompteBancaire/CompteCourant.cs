@@ -35,5 +35,12 @@ namespace ClassLibraryCompteBancaire
             if (Solde - montant >= decouvertMaxi)
                 Solde = Solde - montant;
         }
+        // Redéfinition de la méthode Decrire 
+        // base.Decrire() appelle la méthode Decrire de CompteBancaire
+        public override string Decrire()
+        {
+            return base.Decrire() + ". Son numéro CB est " + numeroCB +
+              " et son découvert maxi est de " + decouvertMaxi + " " + Devise + ".";
+        }
     }
 }
