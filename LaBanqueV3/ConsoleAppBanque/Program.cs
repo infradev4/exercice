@@ -13,6 +13,8 @@ namespace ConsoleAppBanque
         {
 
             double tauxInteret = 0.05;  // taux d'intérêt : 5%
+            double montantTransfert;
+
             CompteEpargne compteOussama = new CompteEpargne("Oussama", 100, "euros", tauxInteret);
             
 
@@ -27,6 +29,14 @@ namespace ConsoleAppBanque
             compteAmelyne.Debiter(1000);
             compteAmelyne.Debiter(4000);//le second retrait de 4000 dollars n'a pas lieu, puisqu'il aurait fait passer le solde en dessous du découvert maximal autorisé "-2500".
             Console.WriteLine(compteAmelyne.Decrire()); // Si j'utilise la methode  => public string decrire()
+
+            CompteCourant compteOussamaCourant = new CompteCourant("Oussama", 1000, "euros", "678910", -500);
+            Console.Write("Entrez le montant du transfert : ");
+            montantTransfert = Convert.ToDouble(Console.ReadLine());
+            compteOussamaCourant.Debiter(montantTransfert);
+            Console.WriteLine(compteOussamaCourant.Decrire());
+            compteAmelyne.Crediter(montantTransfert);
+            Console.WriteLine(compteAmelyne.Decrire());
 
 
             Console.ReadKey();
