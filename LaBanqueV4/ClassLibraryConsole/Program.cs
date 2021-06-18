@@ -11,23 +11,14 @@ namespace ClassLibraryConsole
     {
         static void Main(string[] args)
         {
-            CompteBancaire compte = new CompteBancaire("Pierre", 100, "dollars");
-            Console.WriteLine(compte.Decrire());
+            CompteBancaire compte1 = new CompteBancaire("oz", 10, "euros");
+            Console.WriteLine(compte1.Decrire());
 
-            //Console.WriteLine("Avant la 1ère création : " + CompteBancaire.GetNumeroProchainCompte());
-            //CompteBancaire comptePierre = new CompteBancaire("Pierre");
+            CompteBancaire compte2 = new CompteBancaire("bob", 100, "mad");
+            Console.WriteLine(compte2.ToString());
+            Console.WriteLine(compte2);
 
-            //Console.WriteLine("Avant la 2ème création : " + CompteBancaire.GetNumeroProchainCompte());
-            //CompteBancaire comptePaul = new CompteBancaire("Paul");
 
-            //Console.WriteLine("Avant la 3ème création : " + CompteBancaire.GetNumeroProchainCompte());
-            //CompteBancaire compteJacques = new CompteBancaire("Jacques");
-
-            //Console.WriteLine("Après la 3ème création : " + CompteBancaire.GetNumeroProchainCompte());
-
-            //Console.WriteLine(comptePierre);
-            //Console.WriteLine(comptePaul);
-            //Console.WriteLine(compteJacques);
 
             Console.ReadKey();
         }

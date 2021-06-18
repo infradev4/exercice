@@ -27,8 +27,15 @@ namespace ClassLibraryCompteBancaire
         {
             get { return devise; }
         }
+        //Il prendra uniquement le titulaire en paramètre, et initialisera solde et devise avec leurs valeurs par défaut
+        public CompteBancaire(string titulaire)
+        {
+            this.titulaire = titulaire;
+            solde = 0;
+            devise = "euros";
+        }
 
-        // Constructeur
+        // Constructeur qui initialise les attributs du compte créé "classic"
         public CompteBancaire(string leTitulaire, double soldeInitial, string laDevise)
         {
             titulaire = leTitulaire;
@@ -53,6 +60,10 @@ namespace ClassLibraryCompteBancaire
         {
             string description = "Le solde du compte de " + titulaire + " est de " + solde + " " + devise;
             return description;
+        }
+        public override string ToString()
+        {
+            return "Le solde du compte de " + titulaire + " est de " + solde + " " + devise;
         }
     }
 
