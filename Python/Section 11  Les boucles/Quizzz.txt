@@ -1,0 +1,24 @@
+Les boucles - Quizz
+
+Question 1 :
+
+Peut-on utiliser une boucle 'for' sur une chaîne de caractères comme dans le cas suivant ?
+
+    mot = 'Bonjour'
+    for lettre in mot:
+        print(lettre)
+
+Tout à fait ! La boucle va passer à travers les lettres du mot.
+
+Question 2 :
+
+Quand on boucle sur une liste qui contient des nombres, pourquoi utilise-t-on la variable i ?
+
+C'est une convention souvent utilisé mais que l'on n'est pas obligé de suivre. Le script fonctionnera quand même.
+
+Question 3 :
+
+Pourquoi la fonction while peut être dangereuse à utiliser ?
+Parce qu'elle peut déboucher sur une boucle infini si la condition est toujours vraie.
+
+Si la condition ne change jamais, la boucle ne s'arrêtera jamais et vous allez faire planter votre programme.

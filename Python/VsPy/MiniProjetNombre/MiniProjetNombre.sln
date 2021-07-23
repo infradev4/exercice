@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "S11_44DevineNombreP6While", "S11_44DevineNombreP6While\S11_44DevineNombreP6While.pyproj", "{42177230-4CA7-4018-B79E-E601C5E427F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42177230-4CA7-4018-B79E-E601C5E427F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42177230-4CA7-4018-B79E-E601C5E427F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A4FD845-1EFD-4229-AD41-EDEF81C8F714}
+	EndGlobalSection
+EndGlobal
